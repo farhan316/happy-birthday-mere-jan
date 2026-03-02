@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Nafeesa ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:'Poppins',sans-serif;
+background:black;
+overflow:hidden;
+color:white;
+}
+
+/* Cinematic Intro */
+#intro{
+position:absolute;
+width:100%;
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+background:black;
+font-size:40px;
+animation: fadeOut 3s forwards 3s;
+}
+
+@keyframes fadeOut{
+to{opacity:0; visibility:hidden;}
+}
+
+/* Main Card */
+.card{
+backdrop-filter: blur(20px);
+background: rgba(255,255,255,0.15);
+padding:40px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 0 40px rgba(255,105,180,0.6);
+display:none;
+animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(40px);}
+to{opacity:1;}
+}
+
+button{
+padding:15px 30px;
+border:none;
+border-radius:30px;
+background:white;
+color:#ff4e8a;
+font-size:18px;
+cursor:pointer;
+margin-top:20px;
+transition:0.3s;
+}
+button:hover{transform:scale(1.1);}
+
+#surprise{display:none;margin-top:20px;}
+
+/* Cake */
+.cake{
+font-size:100px;
+animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-20px);}
+}
+
+/* Name Animation */
+.name{
+font-size:32px;
+color:#ffb6c1;
+animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+from{text-shadow:0 0 10px pink;}
+to{text-shadow:0 0 30px hotpink;}
+}
+</style>
+</head>
+
+<body>
+
+<div id="intro">
+✨ For Nafeesa ❤️ ✨
+</div>
+
+<div class="card" id="main">
+<h1 class="name">Nafeesa 💖</h1>
+<h2>Tap For Surprise 🎁</h2>
+<button onclick="openGift()">Open ❤️</button>
+
+<div id="surprise">
+<div class="cake">🎂</div>
+<h2>Happy Birthday Mere Jan Nifii ❤️</h2>
+<p>You are my forever 🥰</p>
+</div>
+</div>
+
+<script>
+setTimeout(()=>{
+document.getElementById("main").style.display="block";
+},3500);
+
+function openGift(){
+document.getElementById("surprise").style.display="block";
+}
+</script>
+
+</body>
+</html>
